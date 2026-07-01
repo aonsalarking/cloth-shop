@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STAR Clothing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.4);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:#FFD700;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+margin-left:25px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#FFD700;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:70px;
+}
+
+.hero span{
+color:#FFD700;
+}
+
+.hero p{
+margin:20px 0;
+font-size:20px;
+}
+
+button{
+padding:15px 35px;
+border:none;
+background:#FFD700;
+color:#111;
+font-size:18px;
+border-radius:30px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+section{
+padding:100px 10%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:40px;
+color:#FFD700;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#1e293b;
+border-radius:20px;
+overflow:hidden;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 30px rgba(255,215,0,.3);
+}
+
+.card img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.price{
+color:#FFD700;
+font-size:22px;
+font-weight:bold;
+margin:10px 0;
+}
+
+.about{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+gap:40px;
+}
+
+.about img{
+width:450px;
+max-width:100%;
+border-radius:20px;
+}
+
+.about-text{
+flex:1;
+}
+
+.contact{
+text-align:center;
+}
+
+input,textarea{
+width:100%;
+padding:15px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#020617;
+margin-top:50px;
+}
+
+.socials{
+margin-top:15px;
+}
+
+.socials a{
+color:#FFD700;
+margin:0 10px;
+text-decoration:none;
+font-size:20px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:45px;
+}
+
+nav{
+display:none;
+}
+
+.about{
+flex-direction:column;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">⭐ STAR</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#products">Products</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero" id="home">
+
+<div>
+
+<h1>Wear Your <span>STAR</span> Style</h1>
+
+<p>Premium Fashion • Modern Style • Affordable Prices</p>
+
+<button onclick="document.getElementById('products').scrollIntoView()">Shop Now</button>
+
+</div>
+
+</section>
+
+<section id="products">
+
+<h2 class="title">Trending Collection</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>Luxury Jacket</h3>
+<p>Warm, stylish and comfortable.</p>
+<div class="price">$59</div>
+<button>Add to Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>Classic T-Shirt</h3>
+<p>Soft cotton for everyday comfort.</p>
+<div class="price">$25</div>
+<button>Add to Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>Fashion Jeans</h3>
+<p>Premium denim with modern fit.</p>
+<div class="price">$45</div>
+<button>Add to Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>Elegant Dress</h3>
+<p>Perfect for every special event.</p>
+<div class="price">$69</div>
+<button>Add to Cart</button>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="title">About STAR</h2>
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80">
+
+<div class="about-text">
+
+<h3>Fashion That Shines</h3>
+
+<br>
+
+<p>
+
+STAR Clothing is your destination for stylish fashion at affordable prices.
+We provide premium-quality clothing for men, women, and kids. Our mission is
+to help everyone look confident and fashionable every day.
+
+</p>
+
+<br>
+
+<button>Learn More</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Contact Us</h2>
+
+<div class="contact">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email">
+
+<textarea rows="5" placeholder="Message"></textarea>
+
+<button onclick="sendMessage()">Send Message</button>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>⭐ STAR Clothing</h2>
+
+<p>Style Starts Here.</p>
+
+<div class="socials">
+
+<a href="#">Facebook</a>
+<a href="#">Instagram</a>
+<a href="#">TikTok</a>
+
+</div>
+
+<br>
+
+<p>© 2025 STAR Clothing. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+function sendMessage(){
+alert("Thank you for contacting STAR Clothing! ⭐");
+}
+
+const cards=document.querySelectorAll(".card");
+
+window.addEventListener("scroll",()=>{
+
+cards.forEach(card=>{
+
+let top=card.getBoundingClientRect().top;
+
+if(top<window.innerHeight-80){
+
+card.style.opacity=1;
+card.style.transform="translateY(0)";
+
+}
+
+});
+
+});
+
+cards.forEach(card=>{
+
+card.style.opacity=0;
+card.style.transform="translateY(60px)";
+card.style.transition=".8s";
+
+});
+
+</script>
+
+</body>
+</html>
